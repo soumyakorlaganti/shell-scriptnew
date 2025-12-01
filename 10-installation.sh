@@ -6,7 +6,7 @@ if [ $USERID -eq 0 ]
 
 then 
     echo "Please run the script with root access."
-    exit1
+    exit 1
 else
     echo "you are super user"
 fi
