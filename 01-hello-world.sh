@@ -1,1 +1,1 @@
-this is the sample script
+this is the sample script.
