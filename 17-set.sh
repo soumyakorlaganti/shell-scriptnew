@@ -12,7 +12,7 @@ else
 fi
 
 dnf install mysql -y
-dnf install git -y
+dnf install ghjhjit -y
 
 echo "is script proceeding?"
 
