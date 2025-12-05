@@ -2,7 +2,7 @@
 
 THRESHOLD=100
 #ALERT_EMAIL="soumyamunni510@gmail.com"
-MESSAGE=" "
+MESSAGE=""
 
 
 while IFS= read -r line
@@ -16,7 +16,7 @@ do
     echo  "Current RAM Usage: $USAGE"
     if [ $USAGE -ge $THRESHOLD ]
     then
-        MESSAGE+="$USAGE is more than $THRESHOLD, Current usage: $USAGE \n"
+        MESSAGE+="$TOTAL is more than $THRESHOLD, Current usage: $USAGE \n"
     fi
 done <<< $THERSHOLD
 
