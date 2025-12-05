@@ -16,7 +16,8 @@ else
 fi
 
 #FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
-FILES=$(find $SOURCE_DIRECTORY -name -mtime +10)
+#FILES=$(find $SOURCE_DIRECTORY -name -mtime +10)
+find "$SOURCE_DIRECTORY" -type f -name "*.log" -mtime +10 -delete
 
 while IFS= read -r line
 do 
