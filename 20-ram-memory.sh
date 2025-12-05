@@ -18,4 +18,4 @@ fi
 
 echo -e "Message: $MESSAGE"
 
-echo "MESSAGE" | mail -s "Memory Usage Alert" soumyamunni510@gmail.com
+echo "MESSAGE" | Mail -s "Memory Usage Alert" soumyamunni510@gmail.com
