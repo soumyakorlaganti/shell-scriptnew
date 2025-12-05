@@ -5,18 +5,15 @@ THRESHOLD=100
 MESSAGE=""
 
 
-while IFS= read -r line
-do
-    USED=$(free | grep Mem | awk '{print $3}')
-    TOTAL=$(free | grep Mem | awk '{print $2}')
+USED=$(free | grep Mem | awk '{print $3}')
+TOTAL=$(free | grep Mem | awk '{print $2}')
 
-    USAGE=$(( USED * 100 / TOTAL ))
+USAGE=$(( USED * 100 / TOTAL ))
+if [ $USAGE -ge $THRESHOLD ]
+then
+    MESSAGE+="$USAGE is more than $TOTAL, Current usage: $USAGE \n"
+fi
 
-    if [ $USAGE -ge $THRESHOLD ]
-    then
-        MESSAGE+="$USAGE is more than $TOTAL, Current usage: $USAGE \n"
-    fi
-done <<< $THERSHOLD
 
 echo -e "Message: $MESSAGE"
 
