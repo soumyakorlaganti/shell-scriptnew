@@ -7,7 +7,7 @@ MESSAGE=" "
 USED=$(free | grep Mem | awk '{print $3}')
 TOTAL=$(free | grep Mem | aws '{print $2}')
 
-USAGE=$((USED*100/TOTAL))
+USAGE=$(( USED * 100 / TOTAL ))
 
 echo  "Current RAM Usage: $USAGE"
 if [ $USAGE -ge $THRESHOLD ]
