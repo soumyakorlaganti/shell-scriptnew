@@ -12,14 +12,12 @@ do
 
     USAGE=$(( USED * 100 / TOTAL ))
 
-
-    echo  "Current RAM Usage: $USAGE"
     if [ $USAGE -ge $THRESHOLD ]
     then
-        MESSAGE+="$TOTAL is more than $THRESHOLD, Current usage: $USAGE \n"
+        MESSAGE+="$USAGE is more than $THRESHOLD, Current usage: $USED \n"
     fi
 done <<< $THERSHOLD
 
 echo -e "Message: $MESSAGE"
 
-echo "MESSAGE" | mail -s "Memory Usage Alert" soumyamunni510@gmail.com
+echo "$MESSAGE" | mail -s "Memory Usage Alert" soumyamunni510@gmail.com
