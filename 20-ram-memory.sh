@@ -14,7 +14,7 @@ do
 
     if [ $USAGE -ge $THRESHOLD ]
     then
-        MESSAGE+="$USED is more than $TOTAL, Current usage: $USED \n"
+        MESSAGE+="$USAGE is more than $TOTAL, Current usage: $USAGE \n"
     fi
 done <<< $THERSHOLD
 
