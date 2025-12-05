@@ -11,7 +11,7 @@ TOTAL=$(free | grep Mem | awk '{print $2}')
 USAGE=$(( USED * 100 / TOTAL ))
 if [ $USAGE -ge $THRESHOLD ]
 then
-    MESSAGE+="$USED is more than $THRESHOLD, Current usage: $USED \n"
+    MESSAGE+="$USAGE is more than $THRESHOLD, Current usage: $USAGE \n"
 fi
 
 
