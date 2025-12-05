@@ -9,7 +9,7 @@ TOTAL=$(free | grep Mem | aws '{print $2}')
 
 USAGE=$(( USED * 100 / TOTAL ))
 
-echo  "Current RAM Usage: $USAGE"
+echo  "Current RAM Usage: $USAGE%"
 if [ $USAGE -ge $THRESHOLD ]
 then
     MESSAGE+="$USAGE is more than $THRESHOLD, Current usage: $USED \n"
