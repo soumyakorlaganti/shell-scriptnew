@@ -20,4 +20,4 @@ done <<< $THERSHOLD
 
 echo -e "Message: $MESSAGE"
 
-echo "$MESSAGE" | mail -s "Memory Usage Alert" soumyamunni510@gmail.com
+echo "$MESSAGE" | mail -s "Memory Threshold Alert" soumyamunni510@gmail.com
