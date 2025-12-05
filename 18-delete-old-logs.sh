@@ -17,10 +17,12 @@ fi
 
 #FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 #FILES=$(find $SOURCE_DIRECTORY -name -mtime +10)
-find "$SOURCE_DIRECTORY" -type f -name "*.log" -mtime +10 -delete
+FILES=$(find "$SOURCE_DIRECTORY" -type f -mtime +10)
 
 while IFS= read -r line
 do 
     echo "Deleting file: $line"
     rm -rf $line
 done <<< $FILES
+
+echo "Files older than 10 days deleted successfully."
