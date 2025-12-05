@@ -5,7 +5,7 @@ THRESHOLD=100
 MESSAGE=" "
 
 USED=$(free | grep Mem | awk '{print $3}')
-TOTAL=$(free | grep Mem | aws '{print $2}')
+TOTAL=$(free | grep Mem | awk '{print $2}')
 
 USAGE=$(( USED * 100 / TOTAL ))
 
