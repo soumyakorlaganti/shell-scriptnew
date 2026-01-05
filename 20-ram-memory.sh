@@ -33,14 +33,14 @@ TOTAL=$(free | awk '/Mem:/ {print $2}')
 
 USAGE=$(( USED * 100 / TOTAL ))
 
-echo "Current RAM Usage: $USAGE% \n"
+echo "Current RAM Usage: $USAGE%"
 
 if [ $USAGE -ge $THRESHOLD ]; then
     MESSAGE+="RAM usage alert!\n"
-    MESSAGE+="Current Usage : $USAGE%\n"
+    MESSAGE+="Current Usage : $USAGE% \n"
     MESSAGE+="Used Memory   : $((USED/1024)) MB\n"
     MESSAGE+="Total Memory  : $((TOTAL/1024)) MB\n"
-    MESSAGE+="Threshold     : $THRESHOLD%\n"
+    MESSAGE+="Threshold     : $THRESHOLD% \n"
 fi
 
 echo -e "Message: $MESSAGE"
