@@ -45,6 +45,6 @@ fi
 
 echo -e "Message: $MESSAGE"
 
-if [ -n "$MESSAGE" ]; then
+if [ -n "$MESSAGE" \n]; then
     echo -e "$MESSAGE" | mail -s "Memory Threshold Alert" "soumyamunni510@gmail.com"
 fi
