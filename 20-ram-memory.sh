@@ -36,13 +36,13 @@ USAGE=$(( USED * 100 / TOTAL ))
 echo -e "Message: $MESSAGE"
 echo  -e "Current RAM Usage: $USAGE%"
 
-if [ $USAGE -ge $THRESHOLD ]; then
-    MESSAGE+="RAM usage alert!\n"
-    MESSAGE+="Current Usage : $USAGE% \n"
-    MESSAGE+="Used Memory   : $((USED/1024)) MB\n"
-    MESSAGE+="Total Memory  : $((TOTAL/1024)) MB\n"
-    MESSAGE+="Threshold     : $THRESHOLD% \n"
-fi
+# if [ $USAGE -ge $THRESHOLD ]; then
+#     MESSAGE+="RAM usage alert!\n"
+#     MESSAGE+="Current Usage : $USAGE% \n"
+#     MESSAGE+="Used Memory   : $((USED/1024)) MB\n"
+#     MESSAGE+="Total Memory  : $((TOTAL/1024)) MB\n"
+#     MESSAGE+="Threshold     : $THRESHOLD% \n"
+# fi
 
 
 # if [ -n "$MESSAGE" ]; then
