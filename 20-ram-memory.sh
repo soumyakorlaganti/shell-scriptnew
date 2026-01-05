@@ -55,4 +55,4 @@ echo  -e "Current RAM Usage: $USAGE%"
 
 
 
-echo "$MESSAGE" | mail -s "Disk Usage Alert" soumyamunni510@gmail.com
+echo "$MESSAGE" | mail -s "Memory Threshold Alert" soumyamunni510@gmail.com
