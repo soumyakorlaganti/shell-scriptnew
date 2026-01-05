@@ -45,7 +45,6 @@ if [ $USAGE -ge $THRESHOLD ]; then
 fi
 
 
-
 if [ -n "$MESSAGE" ]; then
-    echo -e "$MESSAGE" | mail -s "Memory Threshold Alert" "soumyamunni510@gmail.com"
+    echo "$MESSAGE" | mail -s "Memory Threshold Alert" soumyamunni510@gmail.com
 fi
