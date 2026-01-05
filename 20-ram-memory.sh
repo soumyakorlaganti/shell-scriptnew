@@ -51,4 +51,4 @@ fi
 # fi
 
 
-echo "$MESSAGE" | mail -s "Memory Threshold Alert" soumyamunni510@gmail.com
+echo -e "$MESSAGE" | mail -s "Memory Threshold Alert" soumyamunni510@gmail.com
