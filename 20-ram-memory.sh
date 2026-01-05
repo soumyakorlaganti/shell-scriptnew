@@ -38,7 +38,7 @@ echo  -e "Current RAM Usage: $((USED/1024)) MB\n"
 
 if [ $USED -ge $THRESHOLD ]
 then
-    MESSAGE+="Current RAM Usage: $USED is more than $THRESHOLD"
+    MESSAGE+="Current RAM Usage $((USED/1024)) MB\n is more than $THRESHOLD"
 fi
 
 # if [ $USAGE -ge $THRESHOLD ]; then
